@@ -1,11 +1,13 @@
 package com.Java10x.CadastrodeNinjas;
 
-import jakarta.persistence.Entity;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.*;
+
 
 @Entity
+@Table(name="tb_cadastro")
 public class NinjaModel {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long NinjaID;
     private String Nome;
     private String email;
