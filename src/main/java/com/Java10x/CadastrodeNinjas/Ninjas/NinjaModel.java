@@ -17,9 +17,15 @@ import java.util.List;
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long NinjaID;
-    private String Nome;
+
+    private String nome;
+
     private int idade;
+
+    @Column(name="img_url")
+    private String imageUrl;
 
     @Column(unique = true)
     private String email;
