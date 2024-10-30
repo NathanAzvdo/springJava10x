@@ -1,0 +1,7 @@
+2024-10-29 21:12:19.509229-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into tb_cadastro (email, idade, img_url, nome, missoes_id, rank) \000d\000avalues ('teste@gmail.com, 28, 'https:test', 'ninja1[*]', 1, 12)"; SQL statement:
+insert into tb_cadastro (email, idade, img_url, nome, missoes_id, rank) 
+values ('teste@gmail.com, 28, 'https:test', 'ninja1', 1, 12) [42000-224]
+2024-10-29 21:13:43.729359-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into tb_missoes values (id ,dificuldade, nome) [*]values (1, 'facil', 'salvar')"; SQL statement:
+insert into tb_missoes values (id ,dificuldade, nome) values (1, 'facil', 'salvar') [42000-224]
