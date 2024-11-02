@@ -1,5 +1,6 @@
 package com.Java10x.CadastrodeNinjas.Ninjas;
 
+import org.springframework.objenesis.instantiator.basic.NewInstanceInstantiator;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,6 +30,14 @@ public class NinjaService {
 
     public void deletarNinjaPorId(Long id){
       ninjaRepository.deleteById(id);
+    }
+
+    public NinjaModel atualizarPorId(Long id, NinjaModel ninja){
+        if(ninjaRepository.existsById(id)){
+            ninja.setNinjaID(id);
+            return ninjaRepository.save(ninja);
+        }
+        return null;
     }
 
 
