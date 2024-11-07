@@ -1,8 +1,6 @@
 package com.Java10x.CadastrodeNinjas.Ninjas;
 
-import org.springframework.objenesis.instantiator.basic.NewInstanceInstantiator;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 

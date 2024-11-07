@@ -1,0 +1,2 @@
+ALTER TABLE tb_missoes
+ADD COLUMN tipo VARCHAR(255);
