@@ -7,7 +7,7 @@ import java.util.Optional;
 @Service
 public class NinjaService {
 
-    private NinjaRepository ninjaRepository;
+    private final NinjaRepository ninjaRepository;
 
     public NinjaService(NinjaRepository ninjaRepository) {
         this.ninjaRepository = ninjaRepository;
