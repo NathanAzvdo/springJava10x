@@ -25,7 +25,7 @@ public class MissoesController {
         return missoesService.criarMissao(missoesModel);
     }
 
-    @PutMapping("/alterar/:id")
+    @PatchMapping("/edit/{id}")
     public MissoesModel alterarMissao(@PathVariable Long id,@RequestBody MissoesModel missoesModel){
         return missoesService.atualizarPorId(id, missoesModel);
     }
