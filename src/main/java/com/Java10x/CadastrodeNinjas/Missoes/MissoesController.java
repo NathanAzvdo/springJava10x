@@ -16,8 +16,19 @@ public class MissoesController {
     }
 
     @GetMapping("/listar")
-    public List<MissoesDTO> listarMissao(){
-        return missoesService.listarMissoes();
+    public ResponseEntity<List<MissoesDTO>> listarMissao(){
+        List<MissoesDTO> missoes = missoesService.listarMissoes();
+        return ResponseEntity.ok().body(missoes);
+    }
+
+    @GetMapping("/listar/{id}")
+    @Operation(summary = "Lista Missão por ID", description = "Recebe ID por parâmetro da URL e busca no banco de dados")
+    @ApiResponses(value={
+            @ApiResponse(responseCode="200", description = "Missão encontrada com sucesso"),
+            @ApiResponse(responseCode = "404", description = "Missão não encontrada no banco de dados")
+    })
+    public MissoesDTO listarMissaoPorID(@PathVariable Long id){
+        return missoesService.listarPorID(id)
     }
 
     @PostMapping("/criar")
