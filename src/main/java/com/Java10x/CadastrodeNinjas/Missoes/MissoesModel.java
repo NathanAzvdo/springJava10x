@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Schema(description = "Entidade que representa uma missão no sistema, com informações como nome, dificuldade e a lista de ninjas associados.")
+@Schema(description = "Entidade que representa uma missão no sistema, com dados como nome, dificuldade e a lista de ninjas associados.")
 public class MissoesModel {
 
     @Id
